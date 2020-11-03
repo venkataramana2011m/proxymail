@@ -4,6 +4,8 @@
     <jcr:content
         cq:contextHubPath="/etc/cloudsettings/default/contexthub"
         cq:contextHubSegmentsPath="/etc/segmentation/contexthub"
+        cq:lastModified="{Date}2020-10-12T09:21:03.389+05:30"
+        cq:lastModifiedBy="admin"
         cq:template="/conf/proxymail/settings/wcm/templates/content-page"
         jcr:primaryType="cq:PageContent"
         jcr:title="English"
@@ -86,7 +88,24 @@
                     jcr:lastModifiedBy="admin"
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="proxymail/components/content/sharing"/>
+                <demowcmuse
+                    jcr:created="{Date}2020-10-12T09:17:14.077+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-10-12T09:17:34.971+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="proxymail/components/content/demowcmuse"
+                    group="administrators"/>
+                <demowcmuse_747216773
+                    jcr:created="{Date}2020-10-12T09:19:57.687+05:30"
+                    jcr:createdBy="admin"
+                    jcr:lastModified="{Date}2020-10-12T09:21:03.380+05:30"
+                    jcr:lastModifiedBy="admin"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="proxymail/components/content/demowcmuse"
+                    group="af-template-script-writers"/>
             </responsivegrid>
         </root>
+        <image/>
     </jcr:content>
 </jcr:root>

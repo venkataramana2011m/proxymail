@@ -22,17 +22,24 @@ import javax.inject.Named;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.Optional;
 import org.apache.sling.settings.SlingSettingsService;
+
+import proxymail.core.services.MySimpleService;
 
 @Model(adaptables=Resource.class)
 public class HelloWorldModel {
 
-    @Inject
+    @Inject @Optional
     private SlingSettingsService settings;
 
-    @Inject @Named("sling:resourceType") @Default(values="No resourceType")
+    @Inject @Named("sling:resourceType") @Default(values="No resourceType") @Optional
     protected String resourceType;
 
+    @Inject @Optional
+    MySimpleService ms; 
+    
+    @Optional
     private String message;
 
     @PostConstruct
@@ -40,6 +47,7 @@ public class HelloWorldModel {
         message = "\tHello World!\n";
         message += "\tThis is instance: " + settings.getSlingId() + "\n";
         message += "\tResource type is: " + resourceType + "\n";
+        message += "\tVALUE IS " + ms.getSimpleValue()+ "\n";
     }
 
     public String getMessage() {
